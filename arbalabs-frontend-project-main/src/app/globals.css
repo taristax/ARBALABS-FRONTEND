@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font Family Mappings */
+  --font-space: var(--font-ibm-plex-sans), ui-sans-serif, system-ui;
+  --font-data: var(--font-public-sans), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Color Palette — Pure Neutral Premium */
+  --color-bg-primary: #000000;
+  --color-bg-panel: #18181B;
+  --color-border: #27272A;
+  --color-border-hover: #3F3F46;
+  --color-text-secondary: #A1A1AA;
+
+  /* Status Accents — Clear, no neon */
+  --color-accent-blue: #0ea5e9;
+  --color-accent-green: #10b981;
+  --color-accent-amber: #f59e0b;
+  --color-accent-red: #ef4444;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-public-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Tabular numbers for all telemetry data */
+.font-data, [class*="font-data"] {
+  font-family: var(--font-public-sans), sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Very faint structural grid — alignment aid only */
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center center;
+}
+
+/* Solid Panel — Zinc neutral, no glassmorphism */
+.glass-panel {
+  background: #18181B;
+  border: 1px solid #27272A;
+  border-radius: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.glass-panel:hover {
+  border-color: #3F3F46;
+}
+
+.glass-panel-green {
+  background: #18181B;
+  border: 1px solid #27272A;
+  border-radius: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.glass-panel-green:hover {
+  border-color: #3F3F46;
+}
+
+.glass-panel-amber {
+  background: #18181B;
+  border: 1px solid #27272A;
+  border-radius: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.glass-panel-amber:hover {
+  border-color: #3F3F46;
+}
+
+/* Muted Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3F3F46;
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #52525B;
+}
+
+/* Log / Terminal Text */
+.log-text {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
