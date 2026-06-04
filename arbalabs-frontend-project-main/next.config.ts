@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
+    swcMinify: false,
+    unoptimized: true,
   },
   
   reactCompiler: true,
